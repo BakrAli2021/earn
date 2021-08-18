@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://kit-pro.fontawesome.com/releases/v5.13.0/css/pro.min.css">
+    <!--bootsratp-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Russo+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        .content {
+            position: relative;
+            background-image: url('bg.jpg');
+            background-size: cover;
+            background-position: bottom;
+            padding-bottom: 11px;
+        }
+        
+        .content::after {
+            content: '';
+            position: absolute;
+            width: 95%;
+            height: 9px;
+            top: 0;
+            left: 13px;
+            background-color: #0d9ed5;
+            transform: skewX( 47deg);
+        }
+        
+        .content::before {
+            content: '';
+            position: absolute;
+            width: 95%;
+            height: 9px;
+            bottom: 0;
+            left: 13px;
+            background-color: #0d9ed5;
+            transform: skewX( 47deg);
+        }
+        
+        .content .image {
+            position: absolute;
+            right: 0;
+            width: 20%;
+            height: 30px;
+            top: 23px;
+            background: linear-gradient( 270deg, #a6b9c1, transparent);
+        }
+        
+        .content .image img {
+            position: relative;
+            left: 22%;
+            top: -9px;
+        }
+        
+        .content .title {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .content h3 {
+            color: #116084;
+            font-weight: bold;
+            text-shadow: 1px 1px 1px #0f9cd7;
+            font-family: 'DM Serif Text', serif;
+            margin: 18px 0 25px 0;
+            background: url(h3-bg.png);
+            background-size: 81%;
+            width: fit-content;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        .content .date_id,
+        .content .comission {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .content span.label,
+        .content .link {
+            color: #109dd5;
+            font-family: 'Russo One', sans-serif;
+            font-weight: bold;
+            font-style: italic;
+        }
+        
+        .content span.text {
+            font-style: italic;
+            font-weight: bold;
+            font-family: 'Russo One', sans-serif;
+        }
+        
+        .content .comission .amount {
+            position: relative;
+            background: url('egp.png');
+            background-size: cover;
+            padding-left: 4px;
+        }
+        
+        .content .link a {
+            margin-top: 30px;
+            text-decoration: none;
+            color: #0d9ed5;
+            font-size: 10px;
+        }
+        
+        .content .comission,
+        .content .name {
+            margin-top: 12px;
+        }
+        
+        .content .comission {
+            margin-bottom: 32px;
+        }
+        
+        @media only screen and (max-width: 600px) {
+            .content h3 {
+                margin-bottom: 20px;
+                font-size: 20px;
+            }
+            .content span.label,
+            .content .link a {
+                font-size: 13px;
+            }
+            .content span.text {
+                font-size: 11px;
+            }
+            .content::after {
+                left: 8px;
+            }
+            .content::before {
+                left: 8px;
+            }
+            .content .image {
+                top: 16px;
+            }
+            .content .image img {
+                left: 18%;
+            }
+            .content .link a {
+                font-size: 10px;
+            }
+        }
+        
+        @media only screen and (min-width: 600px) {
+            .content h3 {
+                margin-bottom: 20px;
+            }
+            .content span.label,
+            .content .link {
+                font-size: 14px;
+            }
+            .content .image {
+                top: 19px
+            }
+            .content span.text {
+                font-size: 11px;
+            }
+        }
+        
+        @media only screen and (min-width: 768px) {
+            .content span.label,
+            .content .link {
+                font-size: 13px;
+            }
+            .content span.text {
+                font-size: 11px;
+            }
+            .content::after {
+                left: 8px;
+            }
+            .content::before {
+                left: 8px;
+            }
+            .content .image img {
+                left: 22%;
+            }
+        }
+        
+        @media only screen and (min-width: 992px) {
+            .content span.label,
+            .content .link {
+                font-size: 19px;
+            }
+            .content span.text {
+                font-size: 17px;
+            }
+            .content .date_id,
+            .content .name {
+                margin-right: 25px;
+            }
+            .content::after {
+                left: 13px;
+            }
+            .content::before {
+                left: 13px;
+            }
+            .content .image img {
+                left: 33%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 content">
+                <div class="image">
+                    <img src="logo.png" class="img-fluid" alt="" srcset="">
+                </div>
+                <div class="title">
+                    <h3>WEEKLY EARNING</h3>
+                </div>
+                <div class="date_id">
+                    <div class="date"><span class="label">DATE : </span><span class="text">13 / 8 / 2021</span></div>
+                    <div class="id"><span class="label">ID : </span><span class="text">60580</span></div>
+                </div>
+                <div class="name"><span class="label">NAME : </span><span class="text">MOHAMED HAMAAM</span></div>
+                <div class="comission">
+                    <div class="com"><span class="label">COMMISSION : </span><span class="text">TEN THOUSAND</span></div>
+                    <div class="amount"><span class="text">10000 </span > <span class="label">&nbsp;.EGP</span></div>
+                </div>
+                <div class="link"> <a href="">HTTPS://ALHADABABRAND.COM</a></div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
